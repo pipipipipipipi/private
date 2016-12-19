@@ -176,7 +176,7 @@ i :=0;
 j :=0;
 year :=1950;
 
-FOREACH arab IN ARRAY arabaarray LOOP 
+FOREACH arab IN ARRAY arabarray LOOP 
 	for j IN 1..arab LOOP
 	   INSERT INTO foreigner_asia values (k,'Arab',year+i);
 	    k :=k+1;
