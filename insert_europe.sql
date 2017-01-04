@@ -75,40 +75,100 @@ DECLARE
 	Georgiaarray integer[] := ARRAY[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,45,129,181,220,160,221,179,171,237,348];
 	Georgia integer;
 
+	Albaniaarray integer[] := ARRAY[0,0,0,0,0,0,0,0,0,0,0,0,0,2,3,4,0,2,0,0,0,0,1,0,0,4,5,0,13,3,11,10,14,18,14,2,0,4,3,9,15,10,16,23,36,49,68,69,67,81,138,112,136,122,162,143];
+	Albania integer;
+
+	Belarusarray integer[] := ARRAY[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,2,7,166,421,566,532,761,872,924,1139,1248,1205];
+	Belarus integer;
+
+	Czechoslovakiaarray integer[] := ARRAY[5,0,5,1,3,9,12,54,75,303,112,140,107,150,328,217,225,256,347,654,1104,311,582,499,576,505,773,533,697,790,865,783,1196,1287,917,1596,1431,681,1256,1084,1268,1746,1815,0,0,0,0,0,0,0,0,0,0,0,0,0];
+	Czechoslovakia integer;
+
+	Czechrepublicarray integer[] := ARRAY[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1534,1885,2355,2589,2712,3130,3540,3545,4332,4318,4781,5005,5908];
+	Czechrepublic integer;
+
+	Estoniaarray integer[] := ARRAY[2,2,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,31,87,77,136,176,204,379,414,409,541,530,802,682,769,92];
+	Estonia integer;
+
+	Greecearray integer[]:= ARRAY[32,193,137,138,64,365,1291,1438,454,152,174,242,208,263,484,460,555,722,891,1262,1633,1264,1406,1505,1767,1681,2153,2458,2111,2287,2429,2470,2503,2491,2709,2550,2340,2440,2534,2717,3850,4073,3707,3539,3150,2522,2651,2884,2922,3299,3071,3166,3573,3130,3461,4369];
+	Greece integer;
+
+	Kyrgyzstanarray integer[] := ARRAY[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,1,73,118,203,154,244,228,227,323,403,468];
+	Kyrgyzstan integer;
+
+	Kazakhstanarray integer[] := ARRAY[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,6,24,243,526,731,642,572,903,783,1153,1217,1723];
+	Kazakhstan integer;
+
+	Liechtensteinarray integer[] := ARRAY[0,1,1,1,1,1,0,1,3,1,1,1,4,2,9,3,5,2,3,3,24,12,22,9,7,21,20,24,28,43,26,29,35,33,35,58,37,51,42,54,51,57,61,82,61,100,79,80,98,84,101,92,90,92,96,119];
+	Liechtenstein integer;
+
+
+	Luxembourgarray integer[] := ARRAY[,1,1,0,1,1,0,2,2,1,6,4,12,28,12,41,18,22,34,37,51,111,67,58,85,84,116,135,150,147,186,249,199,237,211,182,261,248,358,336,444,475,444,396,336,343,333,291,422,369,460,452,408,406,410,453,690];
+	Luxembourg integer;
+
+	Latviaarray integer[] := ARRAY[2,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11,62,98,142,169,174,175,330,284,361,487,397,514,610,640];
+	Latvia integer;
+
+	Lithuaniaarray integer[] := ARRAY[2,1,1,2,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,41,82,99,107,284,269,332,455,588,489,978,1219,1126,1077,1376];
+	Lithuania integer;
+
+	Monacoarray integer[] := ARRAY[0,0,0,0,0,0,0,0,0,0,2,3,1,0,7,6,5,2,4,8,15,10,5,7,12,9,10,5,16,22,34,31,27,30,84,69,19,20,21,37,38,16,10,16,20,14,26,29,37,11,29,28,50,21,27,28];
+	Monaco integer;
+
+	Maltaarray integer[] := ARRAY[,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,5,18,19,99,18,18,38,159,68,68,73,63,62,35,68,78,81,76,103,67,72,67,102,124,131,105,147,154,187,288,217,267,213,219,206,215,177,219,254];
+	Malta integer;
+
+	Moldovaarray integer[] := ARRAY[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,3,13,36,58,85,63,84,135,178,260,293,350];
+	Moldova integer;
+
+	Macedoniaarray integer[] := ARRAY[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,54,55,129,191,193,163,219,168,159,153,224,197];
+	Macedonia integer;
+
+	Netherlandsarray integer[] := ARRAY[144,256,348,644,478,527,504,789,923,1772,1691,1678,2423,1800,2514,2744,2903,3289,3246,4586,6859,4975,5475,6219,6333,7041,8388,9686,10508,9664,10789,12055,11452,12825,14203,15467,14536,15987,15904,16492,17715,18193,18435,18054,18487,19883,20171,22356,23800,24642,27864,24431,24504,25563,29938,31080];
+	Netherlands integer;
+
+	Turkmenistanarray integer[] := ARRAY[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10,40,49,29,57,55,67,64,24,63];
+	Turkmenistan integer;
+
+	Tajikistanarray integer[] := ARRAY[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,21,51,47,79,167,166,151,200,159,293];
+	Tajikistan integer;
 /*
-Albania,0,0,0,0,0,0,0,0,0,0,0,0,0,2,3,4,0,2,0,0,0,0,1,0,0,4,5,0,13,3,11,10,14,18,14,2,0,4,3,9,15,10,16,23,36,49,68,69,67,81,138,112,136,122,162,143
-Belarus,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,2,7,166,421,566,532,761,872,924,1139,1248,1205
-Czechoslovakia,5,0,5,1,3,9,12,54,75,303,112,140,107,150,328,217,225,256,347,654,1104,311,582,499,576,505,773,533,697,790,865,783,1196,1287,917,1596,1431,681,1256,1084,1268,1746,1815,0,0,0,0,0,0,0,0,0,0,0,0,0
-Czech Republic,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1534,1885,2355,2589,2712,3130,3540,3545,4332,4318,4781,5005,5908
-Estonia,2,2,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,31,87,77,136,176,204,379,414,409,541,530,802,682,769,92
-Greece,32,193,137,138,64,365,1291,1438,454,152,174,242,208,263,484,460,555,722,891,1262,1633,1264,1406,1505,1767,1681,2153,2458,2111,2287,2429,2470,2503,2491,2709,2550,2340,2440,2534,2717,3850,4073,3707,3539,3150,2522,2651,2884,2922,3299,3071,3166,3573,3130,3461,4369
-Kyrgyzstan
-,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,1,73,118,203,154,244,228,227,323,403,468
-Kazakhstan,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,6,24,243,526,731,642,572,903,783,1153,1217,1723
-Liechtenstein,0,1,1,1,1,1,0,1,3,1,1,1,4,2,9,3,5,2,3,3,24,12,22,9,7,21,20,24,28,43,26,29,35,33,35,58,37,51,42,54,51,57,61,82,61,100,79,80,98,84,101,92,90,92,96,119
-Luxembourg,1,1,0,1,1,0,2,2,1,6,4,12,28,12,41,18,22,34,37,51,111,67,58,85,84,116,135,150,147,186,249,199,237,211,182,261,248,358,336,444,475,444,396,336,343,333,291,422,369,460,452,408,406,410,453,690
-Latvia,2,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11,62,98,142,169,174,175,330,284,361,487,397,514,610,640
-Lithuania,2,1,1,2,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,41,82,99,107,284,269,332,455,588,489,978,1219,1126,1077,1376
-Monaco,0,0,0,0,0,0,0,0,0,0,2,3,1,0,7,6,5,2,4,8,15,10,5,7,12,9,10,5,16,22,34,31,27,30,84,69,19,20,21,37,38,16,10,16,20,14,26,29,37,11,29,28,50,21,27,28
-Malta,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,5,18,19,99,18,18,38,159,68,68,73,63,62,35,68,78,81,76,103,67,72,67,102,124,131,105,147,154,187,288,217,267,213,219,206,215,177,219,254
-Moldova,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,3,13,36,58,85,63,84,135,178,260,293,350
-Macedonia,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,54,55,129,191,193,163,219,168,159,153,224,197
-Netherlands,144,256,348,644,478,527,504,789,923,1772,1691,1678,2423,1800,2514,2744,2903,3289,3246,4586,6859,4975,5475,6219,6333,7041,8388,9686,10508,9664,10789,12055,11452,12825,14203,15467,14536,15987,15904,16492,17715,18193,18435,18054,18487,19883,20171,22356,23800,24642,27864,24431,24504,25563,29938,31080
-Turkmenistan,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10,40,49,29,57,55,67,64,24,63
-Tajikistan,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,21,51,47,79,167,166,151,200,159,293
 UK(HongKong),0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,112060,132513,113063,109502,72811,138254,231599,299667,208172,192946,187113,154758,97720,76773,52176
-Ukraine,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,9,29,73,345,1295,1727,1676,2690,3179,3964,4704,4717,5216
-Uzbekistan,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,12,198,494,603,641,815,889,1042,1180,1223,1359
-Vatican,1,1,0,2,0,0,3,0,8,8,9,3,10,6,13,10,9,10,14,5,29,17,9,7,13,26,16,12,15,22,10,52,25,37,15,8,16,20,14,16,8,14,14,11,14,8,10,9,18,18,13,16,17,14,5,6
-Yugoslavia,3,7,18,11,4,17,13,21,48,92,92,148,121,161,327,340,143,229,382,418,914,832,479,589,846,1221,1199,1479,1634,1338,1335,1265,1176,1029,991,1419,1047,1207,1186,1387,1578,1797,917,933,711,815,653,259,144,84,35,25,4,1,0,0
-Armenia,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,3,16,30,60,118,100,93,167,159,161,172,271
-Azerbaijan,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,8,43,90,176,146,137,183,203,213,203,410
-Andorra,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,1,12,5,18,18,18,12,20,11,20,54
-Slovenia,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,137,209,437,469,621,606,843,797,785,815,902,785,908,1032
-Slovakia,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,600,725,715,1019,1377,1354,1314,1377,1558,1949,2028,1991,1847
-Bosnia-Herzegovina,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,23,60,138,154,126,151,168,169,247,209
-Serbia and Montenegro,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,192,554,476,620,751,706,762,802,803
 */
+
+	Ukrainearray integer[] := ARRAY[0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,9,29,73,345,1295,1727,1676,2690,3179,3964,4704,4717,5216];
+	Ukraine integer;
+
+	Uzbekistanarray integer[] := ARRAY[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,12,198,494,603,641,815,889,1042,1180,1223,1359];
+	Uzbekistan integer;
+
+	Vaticanarray integer[] := ARRAY[1,1,0,2,0,0,3,0,8,8,9,3,10,6,13,10,9,10,14,5,29,17,9,7,13,26,16,12,15,22,10,52,25,37,15,8,16,20,14,16,8,14,14,11,14,8,10,9,18,18,13,16,17,14,5,6];
+	Vatican integer;
+
+	Yugoslaviaarray integer[] := ARRAY[3,7,18,11,4,17,13,21,48,92,92,148,121,161,327,340,143,229,382,418,914,832,479,589,846,1221,1199,1479,1634,1338,1335,1265,1176,1029,991,1419,1047,1207,1186,1387,1578,1797,917,933,711,815,653,259,144,84,35,25,4,1,0,0];
+	Yugoslavia integer;
+
+	Armeniaarray integer[] := ARRAY[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,3,16,30,60,118,100,93,167,159,161,172,271];
+	Armenia integer;
+
+	Azerbaijanarray integer[] := ARRAY[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,8,43,90,176,146,137,183,203,213,203,410];
+	Azerbaijan integer;
+
+	Andorraarray integer[] := ARRAY[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,1,12,5,18,18,18,12,20,11,20,54];
+	Andorra integer;
+
+	Sloveniaarray integer[] := ARRAY[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,137,209,437,469,621,606,843,797,785,815,902,785,908,1032];
+	Slovenia integer;
+
+	Slovakiaarray integer[] := ARRAY[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,600,725,715,1019,1377,1354,1314,1377,1558,1949,2028,1991,1847];
+	Slovakia integer[];
+
+	Bosniaherzegovinaarray integer[] := ARRAY[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,23,60,138,154,126,151,168,169,247,209];
+	Bosniaherzegovina integer;
+
+	Serbiaandmontenegroarray integer[] := ARRAY[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,192,554,476,620,751,706,762,802,803];
+	Serbiaandmontenegro integer;
+
 
 
 BEGIN
@@ -439,6 +499,369 @@ FOREACH Georgia IN ARRAY Georgiaarray LOOP
 	END IF;
 END LOOP;
 
+
+i :=0;
+j :=0;
+year :=1950;
+
+FOREACH Albania IN ARRAY Albaniaarray LOOP 
+	for j IN 1..Albania LOOP
+	   INSERT INTO foreigner_europe values (k,'Albania',year+i);
+	    k :=k+1;
+ 	END LOOP;
+	i :=i+1;
+	IF year > 2006 THEN
+	   EXIT;
+	END IF;
+END LOOP;
+
+i :=0;
+j :=0;
+year :=1950;
+
+FOREACH Belarus IN ARRAY Belarusarray LOOP 
+	for j IN 1..Belarus LOOP
+	   INSERT INTO foreigner_europe values (k,'Belarus',year+i);
+	    k :=k+1;
+ 	END LOOP;
+	i :=i+1;
+END LOOP;
+
+i :=0;
+j :=0;
+year :=1950;
+
+FOREACH Czechoslovakia IN ARRAY Czechoslovakiaarray LOOP 
+	for j IN 1..Czechoslovakia LOOP
+	   INSERT INTO foreigner_europe values (k,'Czechoslovakia',year+i);
+	    k :=k+1;
+ 	END LOOP;
+	i :=i+1;
+END LOOP;
+
+i :=0;
+j :=0;
+year :=1950;
+
+FOREACH Czechrepublic IN ARRAY Czechrepublicarray LOOP 
+	for j IN 1..Czechrepublic LOOP
+	   INSERT INTO foreigner_europe values (k,'Czechrepublic',year+i);
+	    k :=k+1;
+ 	END LOOP;
+	i :=i+1;
+END LOOP;
+
+i :=0;
+j :=0;
+year :=1950;
+
+FOREACH Estonia IN ARRAY Estoniaarray LOOP 
+	for j IN 1..Estonia LOOP
+	   INSERT INTO foreigner_europe values (k,'Estonia',year+i);
+	    k :=k+1;
+ 	END LOOP;
+	i :=i+1;
+END LOOP;
+
+i :=0;
+j :=0;
+year :=1950;
+
+FOREACH Greece IN ARRAY Greecearray LOOP 
+	for j IN 1..Greece LOOP
+	   INSERT INTO foreigner_europe values (k,'Greece',year+i);
+	    k :=k+1;
+ 	END LOOP;
+	i :=i+1;
+END LOOP;
+
+i :=0;
+j :=0;
+year :=1950;
+
+FOREACH Kyrgyzstan IN ARRAY Kyrgyzstanarray LOOP 
+	for j IN 1..Kyrgyzstan LOOP
+	   INSERT INTO foreigner_europe values (k,'Kyrgyzstan',year+i);
+	    k :=k+1;
+ 	END LOOP;
+	i :=i+1;
+END LOOP;
+
+i :=0;
+j :=0;
+year :=1950;
+
+FOREACH Kazakhstan IN ARRAY Kazakhstanarray LOOP 
+	for j IN 1..Kazakhstan LOOP
+	   INSERT INTO foreigner_europe values (k,'Kazakhstan',year+i);
+	    k :=k+1;
+ 	END LOOP;
+	i :=i+1;
+END LOOP;
+
+i :=0;
+j :=0;
+year :=1950;
+
+FOREACH Liechtenstein IN ARRAY Liechtensteinarray LOOP 
+	for j IN 1..Liechtenstein LOOP
+	   INSERT INTO foreigner_europe values (k,'Liechtenstein',year+i);
+	    k :=k+1;
+ 	END LOOP;
+	i :=i+1;
+END LOOP;
+
+i :=0;
+j :=0;
+year :=1950;
+
+FOREACH Latvia IN ARRAY Latviaarray LOOP 
+	for j IN 1..Latvia LOOP
+	   INSERT INTO foreigner_europe values (k,'Latvia',year+i);
+	    k :=k+1;
+ 	END LOOP;
+	i :=i+1;
+END LOOP;
+
+i :=0;
+j :=0;
+year :=1950;
+
+FOREACH Lithuania IN ARRAY Lithuaniaarray LOOP 
+	for j IN 1..Lithuania LOOP
+	   INSERT INTO foreigner_europe values (k,'Lithuania',year+i);
+	    k :=k+1;
+ 	END LOOP;
+	i :=i+1;
+END LOOP;
+
+i :=0;
+j :=0;
+year :=1950;
+
+FOREACH Monaco IN ARRAY Monacoarray LOOP 
+	for j IN 1..Monaco LOOP
+	   INSERT INTO foreigner_europe values (k,'Monaco',year+i);
+	    k :=k+1;
+ 	END LOOP;
+	i :=i+1;
+END LOOP;
+
+i :=0;
+j :=0;
+year :=1950;
+
+FOREACH Malta IN ARRAY Maltaarray LOOP 
+	for j IN 1..Malta LOOP
+	   INSERT INTO foreigner_europe values (k,'Malta',year+i);
+	    k :=k+1;
+ 	END LOOP;
+	i :=i+1;
+END LOOP;
+
+i :=0;
+j :=0;
+year :=1950;
+
+FOREACH Moldova IN ARRAY Moldovaarray LOOP 
+	for j IN 1..Moldova LOOP
+	   INSERT INTO foreigner_europe values (k,'Moldova',year+i);
+	    k :=k+1;
+ 	END LOOP;
+	i :=i+1;
+END LOOP;
+
+i :=0;
+j :=0;
+year :=1950;
+
+FOREACH Macedonia IN ARRAY Macedoniaarray LOOP 
+	for j IN 1..Macedonia LOOP
+	   INSERT INTO foreigner_europe values (k,'Macedonia',year+i);
+	    k :=k+1;
+ 	END LOOP;
+	i :=i+1;
+END LOOP;
+
+i :=0;
+j :=0;
+year :=1950;
+
+FOREACH Netherlands IN ARRAY Netherlandsarray LOOP 
+	for j IN 1..Netherlands LOOP
+	   INSERT INTO foreigner_europe values (k,'Netherlands',year+i);
+	    k :=k+1;
+ 	END LOOP;
+	i :=i+1;
+END LOOP;
+
+i :=0;
+j :=0;
+year :=1950;
+
+FOREACH Turkmenistan IN ARRAY Turkmenistanarray LOOP 
+	for j IN 1..Turkmenistan LOOP
+	   INSERT INTO foreigner_europe values (k,'Turkmenistan',year+i);
+	    k :=k+1;
+ 	END LOOP;
+	i :=i+1;
+END LOOP;
+
+i :=0;
+j :=0;
+year :=1950;
+
+FOREACH Tajikistan IN ARRAY Tajikistanarray LOOP 
+	for j IN 1..Tajikistan LOOP
+	   INSERT INTO foreigner_europe values (k,'Tajikistan',year+i);
+	    k :=k+1;
+ 	END LOOP;
+	i :=i+1;
+END LOOP;
+
+i :=0;
+j :=0;
+year :=1950;
+
+FOREACH Ukraine IN ARRAY Ukrainearray LOOP 
+	for j IN 1..Ukraine LOOP
+	   INSERT INTO foreigner_europe values (k,'Ukraine',year+i);
+	    k :=k+1;
+ 	END LOOP;
+	i :=i+1;
+END LOOP;
+
+i :=0;
+j :=0;
+year :=1950;
+
+FOREACH Uzbekistan IN ARRAY Uzbekistanarray LOOP 
+	for j IN 1..Uzbekistan LOOP
+	   INSERT INTO foreigner_europe values (k,'Uzbekistan',year+i);
+	    k :=k+1;
+ 	END LOOP;
+	i :=i+1;
+END LOOP;
+
+i :=0;
+j :=0;
+year :=1950;
+
+FOREACH Vatican IN ARRAY Vaticanarray LOOP 
+	for j IN 1..Vatican LOOP
+	   INSERT INTO foreigner_europe values (k,'Vatican',year+i);
+	    k :=k+1;
+ 	END LOOP;
+	i :=i+1;
+END LOOP;
+
+i :=0;
+j :=0;
+year :=1950;
+
+FOREACH Yugoslavia IN ARRAY Yugoslaviaarray LOOP 
+	for j IN 1..Yugoslavia LOOP
+	   INSERT INTO foreigner_europe values (k,'Yugoslavia',year+i);
+	    k :=k+1;
+ 	END LOOP;
+	i :=i+1;
+END LOOP;
+
+i :=0;
+j :=0;
+year :=1950;
+
+FOREACH Armenia IN ARRAY array LOOP 
+	for j IN 1.. LOOP
+	   INSERT INTO foreigner_europe values (k,'Armenia',year+i);
+	    k :=k+1;
+ 	END LOOP;
+	i :=i+1;
+END LOOP;
+
+i :=0;
+j :=0;
+year :=1950;
+
+FOREACH Azerbaijan IN ARRAY Azerbaijanarray LOOP 
+	for j IN 1..Azerbaijan LOOP
+	   INSERT INTO foreigner_europe values (k,'Azerbaijan',year+i);
+	    k :=k+1;
+ 	END LOOP;
+	i :=i+1;
+END LOOP;
+
+i :=0;
+j :=0;
+year :=1950;
+
+FOREACH Azerbaijan IN ARRAY Azerbaijanarray LOOP 
+	for j IN 1..Azerbaijan LOOP
+	   INSERT INTO foreigner_europe values (k,'Azerbaijan',year+i);
+	    k :=k+1;
+ 	END LOOP;
+	i :=i+1;
+END LOOP;
+
+i :=0;
+j :=0;
+year :=1950;
+
+FOREACH Andorra IN ARRAY Andorraarray LOOP 
+	for j IN 1..Andorra LOOP
+	   INSERT INTO foreigner_europe values (k,'Andorra',year+i);
+	    k :=k+1;
+ 	END LOOP;
+	i :=i+1;
+END LOOP;
+
+i :=0;
+j :=0;
+year :=1950;
+
+FOREACH Slovenia IN ARRAY Sloveniaarray LOOP 
+	for j IN 1..Slovenia LOOP
+	   INSERT INTO foreigner_europe values (k,'Slovenia',year+i);
+	    k :=k+1;
+ 	END LOOP;
+	i :=i+1;
+END LOOP;
+
+i :=0;
+j :=0;
+year :=1950;
+
+FOREACH Slovakia IN ARRAY Slovakiaarray LOOP 
+	for j IN 1..Slovakia LOOP
+	   INSERT INTO foreigner_europe values (k,'Slovakia',year+i);
+	    k :=k+1;
+ 	END LOOP;
+	i :=i+1;
+END LOOP;
+
+i :=0;
+j :=0;
+year :=1950;
+
+FOREACH Bosniaherzegovina IN ARRAY Bosniaherzegovinaarray LOOP 
+	for j IN 1..Bosniaherzegovina LOOP
+	   INSERT INTO foreigner_europe values (k,'Bosniaherzegovina',year+i);
+	    k :=k+1;
+ 	END LOOP;
+	i :=i+1;
+END LOOP;
+
+i :=0;
+j :=0;
+year :=1950;
+
+FOREACH Serbiaandmontenegro IN ARRAY Serbiaandmontenegroarray LOOP 
+	for j IN 1..Serbiaandmontenegro LOOP
+	   INSERT INTO foreigner_europe values (k,'Serbiaandmontenegro',year+i);
+	    k :=k+1;
+ 	END LOOP;
+	i :=i+1;
+END LOOP;
 
 
 RETURN 0;

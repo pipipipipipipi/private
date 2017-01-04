@@ -51,29 +51,70 @@ DECLARE
 	Peruarray integer[] := ARRAY[5,13,21,34,31,21,32,62,89,90,164,353,283,363,548,538,777,745,567,885,1013,1036,1294,1305,1240,1384,1144,1146,849,936,1362,1646,1698,1686,1585,1667,1674,1947,2045,6084,11478,23989,19405,15287,14137,11514,10549,13395,11959,12010,15852,15723,13246,14564,14575,16492];
 	Peru integer;
 
+	Bahamasarray integer[] := ARRAY[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,27,17,8,16,19,13,23,30,56,58,63,44,77,32,91,40,266,297,69,64,48,98,65,66,86,108,88,95,105,66,136,144];
+	Bahamas integer;
 
-/*
-Bahamasarray integer[] := ARRAY[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,27,17,8,16,19,13,23,30,56,58,63,44,77,32,91,40,266,297,69,64,48,98,65,66,86,108,88,95,105,66,136,144];
-Belizesarray integer[] := ARRAY[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,23,17,7,15,14,38,62,118,81,66,74,74,75,48,84,73,54,66,60,74,49,68,65];
-Dominica,
-Honduras,0,1,1,6,2,5,8,14,11,4,2,15,12,26,18,15,25,13,55,66,99,97,56,80,70,142,168,151,216,199,157,218,226,318,306,300,278,222,234,265,193,235,642,386,310,356,259,358,292,298,297,378,425,297,335,445
-Jamaica,0,0,0,0,0,0,0,2,0,0,0,0,0,37,87,54,70,67,76,113,276,185,170,154,128,153,149,128,145,138,122,158,210,233,213,296,254,295,309,379,377,461,510,600,638,595,502,490,528,517,434,513,678,569,705,754
-Nicaragua,1,0,3,2,3,4,6,4,11,12,13,41,26,45,55,30,112,48,46,86,198,60,76,85,118,221,152,183,149,83,85,116,60,77,126,113,119,115,77,116,110,151,140,166,156,159,153,162,138,147,157,149,172,198,231,266
-Panama,0,12,14,13,11,18,34,35,50,57,110,93,95,118,175,134,179,177,140,239,282,256,262,288,279,331,353,418,439,449,543,540,573,507,622,568,524,515,305,369,411,391,362,418,367,452,399,430,432,404,431,435,500,417,390,556
-Saint Lucia,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,4,6,5,8,4,7,9,10,13,22,19,14,13,10,16,17,26,25,35,22,26,43,46,37,49
-Saint Vincent,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,8,7,8,6,8,14,13,16,12,10,4,15,10,13,13,19,13,19,10,17,13,30,27,28
-Saint Kitts and Nevis,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,2,4,6,7,5,4,1,2,5,6,26,10,26,28,21,13,19,9,15,18
-Trinidad and Tobago,0,0,0,0,0,0,0,0,0,0,0,0,1,20,62,48,44,67,44,69,158,121,159,142,111,238,235,215,254,241,341,287,437,554,479,479,321,264,199,163,151,200,219,285,332,311,450,508,575,570,527,506,594,547,620,648
-Grenada,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,6,1,9,1,3,9,2,8,7,13,11,18,5,14,6,14,7,16,12,13,18,5,14,24,38,51,53,45,47,42
-Antigua and Barbuda,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,5,12,1,2,16,1,11,8,16,12,18,13,20,8,25,24,30,24,23,35,21,26,34
-Argentina,22,21,40,64,134,142,116,90,198,229,376,948,443,421,836,870,1039,886,1128,1989,3309,1744,1355,1657,2726,3539,2399,4254,5234,7173,9825,8978,2901,2840,3248,3335,5227,4613,4624,5452,6040,6332,5883,5430,5694,4721,5337,5484,5423,4502,6817,4880,4502,4807,4135,4575
-Bolivia,1,15,3,0,7,3,19,7,18,17,38,44,39,47,51,57,56,79,84,70,151,117,130,124,162,189,240,378,312,317,284,342,264,268,416,501,379,444,475,601,908,2104,1731,1829,1266,1431,1491,1796,1526,1364,1652,1758,1652,1639,1809,2688
-Guyana,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,20,15,59,37,34,10,19,80,36,68,50,52,48,41,46,65,51,61,61,72,73,85,53,58,58,60,69,68,65,54,38,45,63,59,75,73,67,57
-Paraguay,2,2,1,0,1,0,1,6,7,9,10,35,20,20,27,35,56,56,56,75,103,67,208,130,149,182,221,188,326,473,314,365,354,390,381,326,398,418,549,566,797,1015,859,726,847,807,835,868,812,742,1035,883,1101,967,959,1146
-Suriname,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,38,34,72,34,31,68,119,102,48,35,23,15,20,20,21,78,27,34,36,39,22,45,41,39,50,44,53,67,102,54
-Uruguay,1,4,3,2,7,12,20,18,24,19,34,102,143,93,158,94,82,94,81,175,235,138,158,169,202,250,377,544,392,576,595,831,597,467,409,447,386,542,547,471,445,663,560,598,678,655,768,761,774,804,750,720,879,472,384,474
-Venezuela,3,1,4,18,19,26,28,87,83,244,204,135,180,173,453,287,368,245,325,513,829,635,692,614,560,1027,1237,2584,2337,2211,2091,2941,2742,1144,1051,1303,1012,1108,1672,1234,1301,1742,1485,1585,1263,1286,1221,1592,1575,1593,1688,1728,1714,1012,1348,2097
-*/
+	Belizesarray integer[] := ARRAY[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,23,17,7,15,14,38,62,118,81,66,74,74,75,48,84,73,54,66,60,74,49,68,65];
+	Belizes integer;
+
+	Dominicaarray integer[] := ARRAY[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,62,65,104,66,129,108,110,8,24,16,13,36,43,38,81,56,48,74,83,92,53,52,60,87,54,148,228];
+	Dominica integer;
+
+	Hondurasarray integer[] := ARRAY[0,1,1,6,2,5,8,14,11,4,2,15,12,26,18,15,25,13,55,66,99,97,56,80,70,142,168,151,216,199,157,218,226,318,306,300,278,222,234,265,193,235,642,386,310,356,259,358,292,298,297,378,425,297,335,445];
+	Honduras integer;
+
+	Jamaicaarray integer[] := ARRAY[0,0,0,0,0,0,0,2,0,0,0,0,0,37,87,54,70,67,76,113,276,185,170,154,128,153,149,128,145,138,122,158,210,233,213,296,254,295,309,379,377,461,510,600,638,595,502,490,528,517,434,513,678,569,705,754];
+	Jamaica integer;
+
+	Nicaraguaarray integer[] := ARRAY[1,0,3,2,3,4,6,4,11,12,13,41,26,45,55,30,112,48,46,86,198,60,76,85,118,221,152,183,149,83,85,116,60,77,126,113,119,115,77,116,110,151,140,166,156,159,153,162,138,147,157,149,172,198,231,266];
+	Nicaragua integer;
+
+	Panamaarray integer[] := ARRAY[0,12,14,13,11,18,34,35,50,57,110,93,95,118,175,134,179,177,140,239,282,256,262,288,279,331,353,418,439,449,543,540,573,507,622,568,524,515,305,369,411,391,362,418,367,452,399,430,432,404,431,435,500,417,390,556];
+	Panama integer;
+
+	Saintluciaarray integer[] := ARRAY[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,4,6,5,8,4,7,9,10,13,22,19,14,13,10,16,17,26,25,35,22,26,43,46,37,49];
+	Saintlucia integer;
+
+
+	Saintvincentarray integer[] := ARRAY[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,8,7,8,6,8,14,13,16,12,10,4,15,10,13,13,19,13,19,10,17,13,30,27,28];
+	Saintvincent integer;
+
+
+	Saintkittsandnevisarray integer[] := ARRAY[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,2,4,6,7,5,4,1,2,5,6,26,10,26,28,21,13,19,9,15,18];
+	Saintkittsandnevis integer;
+
+
+	Trinidadandtobagoarray integer[] := ARRAY[0,0,0,0,0,0,0,0,0,0,0,0,1,20,62,48,44,67,44,69,158,121,159,142,111,238,235,215,254,241,341,287,437,554,479,479,321,264,199,163,151,200,219,285,332,311,450,508,575,570,527,506,594,547,620,648];
+	Trinidadandtobago integer;
+
+	Grenadaarray integer[] := ARRAY[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,6,1,9,1,3,9,2,8,7,13,11,18,5,14,6,14,7,16,12,13,18,5,14,24,38,51,53,45,47,42];
+	Grenada integer;
+
+	Antiguaandbarbudaarray integer := ARRAY[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,5,12,1,2,16,1,11,8,16,12,18,13,20,8,25,24,30,24,23,35,21,26,34];
+	Antiguaandbarbuda integer;
+
+	Argentinarray integer[] := ARRAY[22,21,40,64,134,142,116,90,198,229,376,948,443,421,836,870,1039,886,1128,1989,3309,1744,1355,1657,2726,3539,2399,4254,5234,7173,9825,8978,2901,2840,3248,3335,5227,4613,4624,5452,6040,6332,5883,5430,5694,4721,5337,5484,5423,4502,6817,4880,4502,4807,4135,4575];
+	Argentin integer;
+
+	Boliviaarray integer[] := ARRAY[1,15,3,0,7,3,19,7,18,17,38,44,39,47,51,57,56,79,84,70,151,117,130,124,162,189,240,378,312,317,284,342,264,268,416,501,379,444,475,601,908,2104,1731,1829,1266,1431,1491,1796,1526,1364,1652,1758,1652,1639,1809,2688];
+	Bolivia integer;
+
+	Guyanaarray integer[] := ARRAY[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,20,15,59,37,34,10,19,80,36,68,50,52,48,41,46,65,51,61,61,72,73,85,53,58,58,60,69,68,65,54,38,45,63,59,75,73,67,57];
+	Guyana integer;
+
+	Paraguayarray integer[] := ARRAY[2,2,1,0,1,0,1,6,7,9,10,35,20,20,27,35,56,56,56,75,103,67,208,130,149,182,221,188,326,473,314,365,354,390,381,326,398,418,549,566,797,1015,859,726,847,807,835,868,812,742,1035,883,1101,967,959,1146];
+	Paraguay integer;
+
+	Surinamearray integer[] := ARRAY[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,38,34,72,34,31,68,119,102,48,35,23,15,20,20,21,78,27,34,36,39,22,45,41,39,50,44,53,67,102,54];
+	Suriname integer;
+
+	Uruguayarray integer[] := ARRAY[1,4,3,2,7,12,20,18,24,19,34,102,143,93,158,94,82,94,81,175,235,138,158,169,202,250,377,544,392,576,595,831,597,467,409,447,386,542,547,471,445,663,560,598,678,655,768,761,774,804,750,720,879,472,384,474];
+	Uruguay integer;
+
+	Venezuelaarray integer[] := ARRAY[3,1,4,18,19,26,28,87,83,244,204,135,180,173,453,287,368,245,325,513,829,635,692,614,560,1027,1237,2584,2337,2211,2091,2941,2742,1144,1051,1303,1012,1108,1672,1234,1301,1742,1485,1585,1263,1286,1221,1592,1575,1593,1688,1728,1714,1012,1348,2097];
+	Venezuela integer;
+
+
 
 BEGIN
 
@@ -296,6 +337,249 @@ FOREACH Peru IN ARRAY Peruarray LOOP
 	IF year > 2006 THEN
 	   EXIT;
 	END IF;
+END LOOP;
+
+i :=0;
+j :=0;
+year :=1950;
+
+FOREACH Bahamas IN ARRAY Bahamasarray LOOP 
+	for j IN 1..Bahamas LOOP
+	   INSERT INTO foreigner_america values (k,'Bahamas',year+i);
+	    k :=k+1;
+ 	END LOOP;
+	i :=i+1;
+END LOOP;
+
+i :=0;
+j :=0;
+year :=1950;
+
+
+FOREACH Belizes IN ARRAY Belizesarray LOOP 
+	for j IN 1..Belizes LOOP
+	   INSERT INTO foreigner_america values (k,'Belizes',year+i);
+	    k :=k+1;
+ 	END LOOP;
+	i :=i+1;
+END LOOP;
+
+i :=0;
+j :=0;
+year :=1950;
+
+
+FOREACH Dominica IN ARRAY Dominicaarray LOOP 
+	for j IN 1..Dominica LOOP
+	   INSERT INTO foreigner_america values (k,'Dominica',year+i);
+	    k :=k+1;
+ 	END LOOP;
+	i :=i+1;
+END LOOP;
+
+i :=0;
+j :=0;
+year :=1950;
+
+FOREACH Honduras IN ARRAY Hondurasarray LOOP 
+	for j IN 1..Honduras LOOP
+	   INSERT INTO foreigner_america values (k,'Honduras',year+i);
+	    k :=k+1;
+ 	END LOOP;
+	i :=i+1;
+END LOOP;
+
+i :=0;
+j :=0;
+year :=1950;
+
+
+FOREACH Jamaica IN ARRAY Jamaicaarray LOOP 
+	for j IN 1..Jamaica LOOP
+	   INSERT INTO foreigner_america values (k,'Jamaica',year+i);
+	    k :=k+1;
+ 	END LOOP;
+	i :=i+1;
+END LOOP;
+
+i :=0;
+j :=0;
+year :=1950;
+
+FOREACH Nicaragua IN ARRAY Nicaraguaarray LOOP 
+	for j IN 1..Nicaragua LOOP
+	   INSERT INTO foreigner_america values (k,'Nicaragua',year+i);
+	    k :=k+1;
+ 	END LOOP;
+	i :=i+1;
+END LOOP;
+
+i :=0;
+j :=0;
+year :=1950;
+
+FOREACH Panama IN ARRAY Panamaarray LOOP 
+	for j IN 1..Panama LOOP
+	   INSERT INTO foreigner_america values (k,'Panama',year+i);
+	    k :=k+1;
+ 	END LOOP;
+	i :=i+1;
+END LOOP;
+
+i :=0;
+j :=0;
+year :=1950;
+
+FOREACH Saintlucia IN ARRAY Saintluciaarray LOOP 
+	for j IN 1..Saintlucia LOOP
+	   INSERT INTO foreigner_america values (k,'Saintlucia',year+i);
+	    k :=k+1;
+ 	END LOOP;
+	i :=i+1;
+END LOOP;
+
+i :=0;
+j :=0;
+year :=1950;
+
+FOREACH Saintvincent IN ARRAY Saintvincentarray LOOP 
+	for j IN 1..Saintvincent LOOP
+	   INSERT INTO foreigner_america values (k,'Saintvincent',year+i);
+	    k :=k+1;
+ 	END LOOP;
+	i :=i+1;
+END LOOP;
+
+i :=0;
+j :=0;
+year :=1950;
+
+FOREACH Saintkittsandnevis IN ARRAY Saintkittsandnevisarray LOOP 
+	for j IN 1..Saintkittsandnevis LOOP
+	   INSERT INTO foreigner_america values (k,'Saintkittsandnevis',year+i);
+	    k :=k+1;
+ 	END LOOP;
+	i :=i+1;
+END LOOP;
+
+i :=0;
+j :=0;
+year :=1950;
+
+FOREACH Trinidadandtobago IN ARRAY Trinidadandtobagoarray LOOP 
+	for j IN 1..Trinidadandtobago LOOP
+	   INSERT INTO foreigner_america values (k,'Trinidadandtobago',year+i);
+	    k :=k+1;
+ 	END LOOP;
+	i :=i+1;
+END LOOP;
+
+i :=0;
+j :=0;
+year :=1950;
+
+FOREACH Grenada IN ARRAY Grenadaarray LOOP 
+	for j IN 1..Grenada LOOP
+	   INSERT INTO foreigner_america values (k,'Grenada',year+i);
+	    k :=k+1;
+ 	END LOOP;
+	i :=i+1;
+END LOOP;
+
+i :=0;
+j :=0;
+year :=1950;
+
+FOREACH Antiguaandbarbuda IN ARRAY Antiguaandbarbudaarray LOOP 
+	for j IN 1..Antiguaandbarbuda LOOP
+	   INSERT INTO foreigner_america values (k,'Antiguaandbarbuda',year+i);
+	    k :=k+1;
+ 	END LOOP;
+	i :=i+1;
+END LOOP;
+
+i :=0;
+j :=0;
+year :=1950;
+
+FOREACH Argentin IN ARRAY Argentinarray LOOP 
+	for j IN 1..Argentin LOOP
+	   INSERT INTO foreigner_america values (k,'Argentin',year+i);
+	    k :=k+1;
+ 	END LOOP;
+	i :=i+1;
+END LOOP;
+
+i :=0;
+j :=0;
+year :=1950;
+
+FOREACH Bolivia IN ARRAY Boliviaarray LOOP 
+	for j IN 1..Bolivia LOOP
+	   INSERT INTO foreigner_america values (k,'Bolivia',year+i);
+	    k :=k+1;
+ 	END LOOP;
+	i :=i+1;
+END LOOP;
+
+i :=0;
+j :=0;
+year :=1950;
+
+FOREACH Guyana IN ARRAY Guyanaarray LOOP 
+	for j IN 1..Guyana LOOP
+	   INSERT INTO foreigner_america values (k,'Guyana',year+i);
+	    k :=k+1;
+ 	END LOOP;
+	i :=i+1;
+END LOOP;
+
+i :=0;
+j :=0;
+year :=1950;
+
+FOREACH Paraguay IN ARRAY Paraguayarray LOOP 
+	for j IN 1..Paraguay LOOP
+	   INSERT INTO foreigner_america values (k,'Paraguay',year+i);
+	    k :=k+1;
+ 	END LOOP;
+	i :=i+1;
+END LOOP;
+
+i :=0;
+j :=0;
+year :=1950;
+
+FOREACH Suriname IN ARRAY Surinamearray LOOP 
+	for j IN 1..Suriname LOOP
+	   INSERT INTO foreigner_america values (k,'Suriname',year+i);
+	    k :=k+1;
+ 	END LOOP;
+	i :=i+1;
+END LOOP;
+
+i :=0;
+j :=0;
+year :=1950;
+
+FOREACH Uruguay IN ARRAY Uruguayarray LOOP 
+	for j IN 1..Uruguay LOOP
+	   INSERT INTO foreigner_america values (k,'Uruguay',year+i);
+	    k :=k+1;
+ 	END LOOP;
+	i :=i+1;
+END LOOP;
+
+i :=0;
+j :=0;
+year :=1950;
+
+FOREACH Venezuela IN ARRAY Venezuelaarray LOOP 
+	for j IN 1..Venezuela LOOP
+	   INSERT INTO foreigner_america values (k,'Venezuela',year+i);
+	    k :=k+1;
+ 	END LOOP;
+	i :=i+1;
 END LOOP;
 
 RETURN 0;
