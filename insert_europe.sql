@@ -36,7 +36,7 @@ DECLARE
 	Norwayarray integer[] := ARRAY[148,268,306,431,146,177,210,538,504,405,561,653,842,773,999,1284,1431,1817,1972,2030,2684,2363,3017,2916,3570,4147,4073,5174,5256,4349,5235,6554,6492,6326,5982,8066,7144,5675,5139,4659,5148,5343,5404,5915,5472,6122,6713,8119,8510,7367,7326,6880,7070,7474,8290,8894];
 	Norway integer;
 	
-	Polandarray integer[] := ARRAY[32,18,9,8,13,3,8,55,39,40,169,78,86,262,367,127,239,142,186,255,634,476,1015,855,860,1027,1200,1225,1243,1214,1253,1009,582,869,965,1344,1296,1502,2038,2795,3196,2235,2261,2177,2654,2843,3178,3476,3883,4863,4833,4752,5377,5551,6463,7249];
+0	Polandarray integer[] := ARRAY[32,18,9,8,13,3,8,55,39,40,169,78,86,262,367,127,239,142,186,255,634,476,1015,855,860,1027,1200,1225,1243,1214,1253,1009,582,869,965,1344,1296,1502,2038,2795,3196,2235,2261,2177,2654,2843,3178,3476,3883,4863,4833,4752,5377,5551,6463,7249];
 	Poland integer;
 	
 	Portugalarray integer[] := ARRAY[92,138,140,118,162,172,178,166,209,200,273,246,260,371,477,394,533,458,523,663,2243,836,1149,1732,1439,991,1128,1333,1611,1843,2278,3421,4375,4780,3918,4667,3558,4173,4260,4526,5813,5534,6204,6682,5533,4235,4993,5320,6970,7852,7936,7132,9430,9556,11730,10943];
@@ -385,7 +385,22 @@ year :=1950;
 
 FOREACH SanMarino IN ARRAY SanMarinoarray LOOP 
 	for j IN 1..SanMarino LOOP
-	   INSERT INTO foreigner_europe values (k,'SanMarino',year+i);
+	   INSERT INTO foreigner_europe values (k,'San Marino',year+i);
+	    k :=k+1;
+ 	END LOOP;
+	i :=i+1;
+	IF year > 2006 THEN
+	   EXIT;
+	END IF;
+END LOOP;
+
+i :=0;
+j :=0;
+year :=1950;
+
+FOREACH Spain IN ARRAY Spainarray LOOP 
+	for j IN 1..Spain LOOP
+	   INSERT INTO foreigner_europe values (k,'Spain',year+i);
 	    k :=k+1;
  	END LOOP;
 	i :=i+1;
@@ -430,7 +445,7 @@ year :=1950;
 
 FOREACH UK IN ARRAY UKarray LOOP 
 	for j IN 1..UK LOOP
-	   INSERT INTO foreigner_europe values (k,'UK',year+i);
+	   INSERT INTO foreigner_europe values (k,'United Kingdom',year+i);
 	    k :=k+1;
  	END LOOP;
 	i :=i+1;
@@ -533,7 +548,7 @@ year :=1950;
 
 FOREACH Czechoslovakia IN ARRAY Czechoslovakiaarray LOOP 
 	for j IN 1..Czechoslovakia LOOP
-	   INSERT INTO foreigner_europe values (k,'Czechoslovakia',year+i);
+	   INSERT INTO foreigner_europe values (k,'Czecho Slovakia',year+i);
 	    k :=k+1;
  	END LOOP;
 	i :=i+1;
@@ -545,7 +560,7 @@ year :=1950;
 
 FOREACH Czechrepublic IN ARRAY Czechrepublicarray LOOP 
 	for j IN 1..Czechrepublic LOOP
-	   INSERT INTO foreigner_europe values (k,'Czechrepublic',year+i);
+	   INSERT INTO foreigner_europe values (k,'Czech Republic',year+i);
 	    k :=k+1;
  	END LOOP;
 	i :=i+1;
@@ -606,6 +621,18 @@ year :=1950;
 FOREACH Liechtenstein IN ARRAY Liechtensteinarray LOOP 
 	for j IN 1..Liechtenstein LOOP
 	   INSERT INTO foreigner_europe values (k,'Liechtenstein',year+i);
+	    k :=k+1;
+ 	END LOOP;
+	i :=i+1;
+END LOOP;
+
+i :=0;
+j :=0;
+year :=1950;
+
+FOREACH Luxembourg IN ARRAY Luxembourgarray LOOP 
+	for j IN 1..Luxembourg LOOP
+	   INSERT INTO foreigner_europe values (k,'Luxembourg',year+i);
 	    k :=k+1;
  	END LOOP;
 	i :=i+1;
@@ -749,7 +776,7 @@ year :=1950;
 
 FOREACH Vatican IN ARRAY Vaticanarray LOOP 
 	for j IN 1..Vatican LOOP
-	   INSERT INTO foreigner_europe values (k,'Vatican',year+i);
+	   INSERT INTO foreigner_europe values (k,'Vatican City',year+i);
 	    k :=k+1;
  	END LOOP;
 	i :=i+1;
@@ -774,18 +801,6 @@ year :=1950;
 FOREACH Armenia IN ARRAY array LOOP 
 	for j IN 1.. LOOP
 	   INSERT INTO foreigner_europe values (k,'Armenia',year+i);
-	    k :=k+1;
- 	END LOOP;
-	i :=i+1;
-END LOOP;
-
-i :=0;
-j :=0;
-year :=1950;
-
-FOREACH Azerbaijan IN ARRAY Azerbaijanarray LOOP 
-	for j IN 1..Azerbaijan LOOP
-	   INSERT INTO foreigner_europe values (k,'Azerbaijan',year+i);
 	    k :=k+1;
  	END LOOP;
 	i :=i+1;
@@ -845,7 +860,7 @@ year :=1950;
 
 FOREACH Bosniaherzegovina IN ARRAY Bosniaherzegovinaarray LOOP 
 	for j IN 1..Bosniaherzegovina LOOP
-	   INSERT INTO foreigner_europe values (k,'Bosniaherzegovina',year+i);
+	   INSERT INTO foreigner_europe values (k,'Bosnia and Herzegovina',year+i);
 	    k :=k+1;
  	END LOOP;
 	i :=i+1;
@@ -857,7 +872,7 @@ year :=1950;
 
 FOREACH Serbiaandmontenegro IN ARRAY Serbiaandmontenegroarray LOOP 
 	for j IN 1..Serbiaandmontenegro LOOP
-	   INSERT INTO foreigner_europe values (k,'Serbiaandmontenegro',year+i);
+	   INSERT INTO foreigner_europe values (k,'Serbia and Montenegro',year+i);
 	    k :=k+1;
  	END LOOP;
 	i :=i+1;

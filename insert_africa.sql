@@ -125,14 +125,14 @@ DECLARE
        Somaliaarray integer[] := ARRAY[0,0,0,0,0,0,0,0,0,0,0,1,2,2,13,1,3,1,7,3,13,16,10,5,8,10,8,28,16,35,17,32,36,43,27,51,51,50,55,49,39,15,19,12,18,14,8,10,11,16,11,6,24,37,15,10];
        Somalia integer;
 
-       SomaliSudanarray integer[] := ARRAY[0,0,2,1,8,0,1,21,4,9,9,27,26,41,31,44,67,34,73,54,55,52,79,98,109,135,161,201,178,197,257,239,249,299,328,250,233,253,200,265,249,272,256,243,145,161,155,135,185,196,219,247,288,347,300,448];
-       SomaliSudan integer;
+       Sudanarray integer[] := ARRAY[0,0,2,1,8,0,1,21,4,9,9,27,26,41,31,44,67,34,73,54,55,52,79,98,109,135,161,201,178,197,257,239,249,299,328,250,233,253,200,265,249,272,256,243,145,161,155,135,185,196,219,247,288,347,300,448];
+       Sudan integer;
 
        Swazilandarray integer[] := ARRAY[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,9,24,29,44,94,109,68,79,87,213,177,146,35,17,14,7,10,15,19,31,32,33,37,27,36,77,25,27,38,42,110,44,38];
        Swaziland integer;
 
-       SwazilasantomePrincipendoarray integer[] := ARRAY[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,2,2,0,4,1,2,0,0,2,1,3,7,4,4,4,3,4,3,7,6,6,7,2,5,7,12,13,23];
-       SwazilasantomePrincipendo integer;
+       Saotomearray integer[] := ARRAY[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,2,2,0,4,1,2,0,0,2,1,3,7,4,4,4,3,4,3,7,6,6,7,2,5,7,12,13,23];
+       Saotome integer;
 
        Seychellesarray integer[] := ARRAY[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,9,7,9,11,22,26,45,37,33,27,31,28,34,46,24,25,47,50,52,54,35,56,41,23,43,31,46,61,35];
        Seychelles integer;
@@ -149,8 +149,8 @@ DECLARE
        Ugandaarray integer[] := ARRAY[0,0,0,0,0,0,0,0,1,1,1,0,0,9,35,63,31,22,46,44,186,66,73,77,106,81,101,106,123,76,96,103,130,164,133,130,87,113,172,138,192,193,314,375,508,1076,483,624,509,638,778,316,379,451,725,934];
        Uganda integer;
 
-       SouthAfricaRepublicarray integer[] := ARRAY[22,172,113,199,106,163,217,313,325,425,493,581,952,1149,1584,1642,1804,2035,2611,2873,3796,2936,3130,4177,4342,4365,3203,3157,3512,3037,4386,6717,8188,9258,8352,3895,2729,2083,1823,1723,2011,2461,3035,2997,3117,3171,3189,3649,3507,3337,4357,4365,4639,4529,5072,5941];
-       SouthAfricaRepublic integer;
+       SouthAfricaarray integer[] := ARRAY[22,172,113,199,106,163,217,313,325,425,493,581,952,1149,1584,1642,1804,2035,2611,2873,3796,2936,3130,4177,4342,4365,3203,3157,3512,3037,4386,6717,8188,9258,8352,3895,2729,2083,1823,1723,2011,2461,3035,2997,3117,3171,3189,3649,3507,3337,4357,4365,4639,4529,5072,5941];
+       SouthAfrica integer;
 
        Egyptarray integer[] := ARRAY[13,31,6,25,29,37,25,85,108,121,257,263,289,252,379,220,270,187,218,415,603,479,423,442,595,939,1331,1477,1582,1483,1855,2188,2070,3128,2891,2912,1957,2010,1769,1884,1827,1503,1972,2170,2452,2325,2324,2467,2779,2922,2854,2721,2855,2775,2815,3321];
        Egypt integer;
@@ -220,7 +220,7 @@ year :=1950;
 
 FOREACH CentralAfrica IN ARRAY CentralAfricaarray LOOP 
 	for j IN 1..CentralAfrica LOOP
-	   INSERT INTO foreigner_europe values (k,'CentralAfrica',year+i);
+	   INSERT INTO foreigner_europe values (k,'Central African',year+i);
 	    k :=k+1;
  	END LOOP;
 	i :=i+1;
@@ -244,7 +244,7 @@ year :=1950;
 
 FOREACH RepublicofCongo IN ARRAY RepublicofCongoarray LOOP 
 	for j IN 1..RepublicofCongo LOOP
-	   INSERT INTO foreigner_europe values (k,'RepublicofCongo',year+i);
+	   INSERT INTO foreigner_europe values (k,'Republic of Congo',year+i);
 	    k :=k+1;
  	END LOOP;
 	i :=i+1;
@@ -256,7 +256,7 @@ year :=1950;
 
 FOREACH DemocraticRepublicoftheCongo IN ARRAY DemocraticRepublicoftheCongoarray LOOP 
 	for j IN 1..DemocraticRepublicoftheCongo LOOP
-	   INSERT INTO foreigner_europe values (k,'DemocraticRepublicoftheCongo',year+i);
+	   INSERT INTO foreigner_europe values (k,'Democratic Republic of the Congo',year+i);
 	    k :=k+1;
  	END LOOP;
 	i :=i+1;
@@ -268,7 +268,7 @@ year :=1950;
 
 FOREACH CaboVerde IN ARRAY CaboVerdearray LOOP 
 	for j IN 1..CaboVerde LOOP
-	   INSERT INTO foreigner_europe values (k,'CaboVerde',year+i);
+	   INSERT INTO foreigner_europe values (k,'Cabo Verde',year+i);
 	    k :=k+1;
  	END LOOP;
 	i :=i+1;
@@ -328,7 +328,7 @@ year :=1950;
 
 FOREACH EquatorialGuinea IN ARRAY EquatorialGuineaarray LOOP 
 	for j IN 1..EquatorialGuinea LOOP
-	   INSERT INTO foreigner_europe values (k,'EquatorialGuinea',year+i);
+	   INSERT INTO foreigner_europe values (k,'Equatorial Guinea',year+i);
 	    k :=k+1;
  	END LOOP;
 	i :=i+1;
@@ -400,7 +400,7 @@ year :=1950;
 
 FOREACH GuineaBissau IN ARRAY GuineaBissauarray LOOP 
 	for j IN 1..GuineaBissau LOOP
-	   INSERT INTO foreigner_europe values (k,'GuineaBissau',year+i);
+	   INSERT INTO foreigner_europe values (k,'Guinea Bissau',year+i);
 	    k :=k+1;
  	END LOOP;
 	i :=i+1;
@@ -412,7 +412,7 @@ year :=1950;
 
 FOREACH IvoryCoast IN ARRAY IvoryCoastarray LOOP 
 	for j IN 1..IvoryCoast LOOP
-	   INSERT INTO foreigner_europe values (k,'IvoryCoast',year+i);
+	   INSERT INTO foreigner_europe values (k,'Ivory Coast',year+i);
 	    k :=k+1;
  	END LOOP;
 	i :=i+1;
@@ -586,6 +586,7 @@ FOREACH Namibia IN ARRAY Namibiaarray LOOP
 	i :=i+1;
 END LOOP;
 
+
 i :=0;
 j :=0;
 year :=1950;
@@ -616,7 +617,7 @@ year :=1950;
 
 FOREACH SierraLeone IN ARRAY SierraLeonearray LOOP 
 	for j IN 1..SierraLeone LOOP
-	   INSERT INTO foreigner_europe values (k,'SierraLeone',year+i);
+	   INSERT INTO foreigner_europe values (k,'Sierra Leone',year+i);
 	    k :=k+1;
  	END LOOP;
 	i :=i+1;
@@ -638,9 +639,9 @@ i :=0;
 j :=0;
 year :=1950;
 
-FOREACH SomaliSudan IN ARRAY SomaliSudanarray LOOP 
-	for j IN 1..SomaliSudan LOOP
-	   INSERT INTO foreigner_europe values (k,'SomaliSudan',year+i);
+FOREACH Sudan IN ARRAY Sudanarray LOOP 
+	for j IN 1..Sudan LOOP
+	   INSERT INTO foreigner_europe values (k,'Sudan',year+i);
 	    k :=k+1;
  	END LOOP;
 	i :=i+1;
@@ -662,9 +663,9 @@ i :=0;
 j :=0;
 year :=1950;
 
-FOREACH SwazilasantomePrincipendo IN ARRAY SwazilasantomePrincipendoarray LOOP 
-	for j IN 1..SwazilasantomePrincipendo LOOP
-	   INSERT INTO foreigner_europe values (k,'SwazilasantomePrincipendo',year+i);
+FOREACH Saotome IN ARRAY Saotomearray LOOP 
+	for j IN 1..Saotome LOOP
+	   INSERT INTO foreigner_europe values (k,'Sao Tome and Principe',year+i);
 	    k :=k+1;
  	END LOOP;
 	i :=i+1;
@@ -710,6 +711,18 @@ i :=0;
 j :=0;
 year :=1950;
 
+FOREACH Tunisia IN ARRAY Tunisiaarray LOOP 
+	for j IN 1..Tunisia LOOP
+	   INSERT INTO foreigner_europe values (k,'Tunisia',year+i);
+	    k :=k+1;
+ 	END LOOP;
+	i :=i+1;
+END LOOP;
+
+i :=0;
+j :=0;
+year :=1950;
+
 FOREACH Uganda IN ARRAY Ugandaarray LOOP 
 	for j IN 1..Uganda LOOP
 	   INSERT INTO foreigner_europe values (k,'Uganda',year+i);
@@ -722,9 +735,9 @@ i :=0;
 j :=0;
 year :=1950;
 
-FOREACH SouthAfricaRepublic IN ARRAY SouthAfricaRepublicarray LOOP 
-	for j IN 1..SouthAfricaRepublic LOOP
-	   INSERT INTO foreigner_europe values (k,'SouthAfricaRepublic',year+i);
+FOREACH SouthAfrica IN ARRAY SouthAfricaarray LOOP 
+	for j IN 1..SouthAfrica LOOP
+	   INSERT INTO foreigner_europe values (k,'South Africa',year+i);
 	    k :=k+1;
  	END LOOP;
 	i :=i+1;
@@ -748,7 +761,7 @@ year :=1950;
 
 FOREACH BurkinaFaso IN ARRAY BurkinaFasoarray LOOP 
 	for j IN 1..BurkinaFaso LOOP
-	   INSERT INTO foreigner_europe values (k,'BurkinaFaso',year+i);
+	   INSERT INTO foreigner_europe values (k,'Burkina Faso',year+i);
 	    k :=k+1;
  	END LOOP;
 	i :=i+1;

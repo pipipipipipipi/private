@@ -9,8 +9,8 @@ DECLARE
 	Barbadosarray integer[] := ARRAY[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,24,15,8,15,15,19,25,18,25,29,51,57,51,65,52,65,51,75,240,98,39,51,54,59,69,83,72,72,61,64,110,71,95,95];
 	Barbados integer;
 	
-	Columbiaarray integer[] := ARRAY[20,4,2,24,26,28,55,31,75,108,135,172,140,174,323,231,240,249,354,561,935,800,638,944,711,956,1226,1643,1992,1993,2111,2526,2692,2391,2295,2399,2183,2400,2569,2838,2464,2922,3023,3524,3632,3529,3132,3202,2921,2941,3451,3660,4090,3331,3402,3673];
-	Columbia integer;
+	Colombiaarray integer[] := ARRAY[20,4,2,24,26,28,55,31,75,108,135,172,140,174,323,231,240,249,354,561,935,800,638,944,711,956,1226,1643,1992,1993,2111,2526,2692,2391,2295,2399,2183,2400,2569,2838,2464,2922,3023,3524,3632,3529,3132,3202,2921,2941,3451,3660,4090,3331,3402,3673];
+	Colombia integer;
 	
 	Chilearray integer[] := ARRAY[8,4,10,18,21,20,39,57,65,74,173,229,140,128,199,346,339,298,348,527,1018,546,501,478,578,550,861,1524,1505,1624,1625,1854,1226,1181,1293,1287,1222,1464,1477,1661,1489,2036,2025,2059,2072,2319,2299,2607,2017,2235,2374,2134,2504,1998,2289,2541];
 	Chile integer;
@@ -93,8 +93,8 @@ DECLARE
 	Antiguaandbarbudaarray integer := ARRAY[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,5,12,1,2,16,1,11,8,16,12,18,13,20,8,25,24,30,24,23,35,21,26,34];
 	Antiguaandbarbuda integer;
 
-	Argentinarray integer[] := ARRAY[22,21,40,64,134,142,116,90,198,229,376,948,443,421,836,870,1039,886,1128,1989,3309,1744,1355,1657,2726,3539,2399,4254,5234,7173,9825,8978,2901,2840,3248,3335,5227,4613,4624,5452,6040,6332,5883,5430,5694,4721,5337,5484,5423,4502,6817,4880,4502,4807,4135,4575];
-	Argentin integer;
+	Argentinaarray integer[] := ARRAY[22,21,40,64,134,142,116,90,198,229,376,948,443,421,836,870,1039,886,1128,1989,3309,1744,1355,1657,2726,3539,2399,4254,5234,7173,9825,8978,2901,2840,3248,3335,5227,4613,4624,5452,6040,6332,5883,5430,5694,4721,5337,5484,5423,4502,6817,4880,4502,4807,4135,4575];
+	Argentina integer;
 
 	Boliviaarray integer[] := ARRAY[1,15,3,0,7,3,19,7,18,17,38,44,39,47,51,57,56,79,84,70,151,117,130,124,162,189,240,378,312,317,284,342,264,268,416,501,379,444,475,601,908,2104,1731,1829,1266,1431,1491,1796,1526,1364,1652,1758,1652,1639,1809,2688];
 	Bolivia integer;
@@ -133,9 +133,9 @@ i :=0;
 j :=0;
 year :=1950;
 
-FOREACH Columbia IN ARRAY Columbiaarray LOOP 
-	for j IN 1..Columbia LOOP
-	   INSERT INTO foreigner_america values (k,'Columbia',year+i);
+FOREACH Colombia IN ARRAY Colombiaarray LOOP 
+	for j IN 1..Colombia LOOP
+	   INSERT INTO foreigner_america values (k,'Colombia',year+i);
 	    k :=k+1;
  	END LOOP;
 	i :=i+1;
@@ -180,7 +180,7 @@ year :=1950;
 
 FOREACH CostaRica IN ARRAY CostaRicaarray LOOP 
 	for j IN 1..CostaRica LOOP
-	   INSERT INTO foreigner_america values (k,'CostaRica',year+i);
+	   INSERT INTO foreigner_america values (k,'Costa Rica',year+i);
 	    k :=k+1;
  	END LOOP;
 	i :=i+1;
@@ -210,7 +210,7 @@ year :=1950;
 
 FOREACH DominicanRepublic IN ARRAY DominicanRepublicarray LOOP 
 	for j IN 1..DominicanRepublic LOOP
-	   INSERT INTO foreigner_america values (k,'DominicanRepublic',year+i);
+	   INSERT INTO foreigner_america values (k,'Dominican Republic',year+i);
 	    k :=k+1;
  	END LOOP;
 	i :=i+1;
@@ -240,7 +240,7 @@ year :=1950;
 
 FOREACH ElSalvador IN ARRAY ElSalvadorarray LOOP 
 	for j IN 1..ElSalvador LOOP
-	   INSERT INTO foreigner_america values (k,'ElSalvador',year+i);
+	   INSERT INTO foreigner_america values (k,'El Salvador',year+i);
 	    k :=k+1;
  	END LOOP;
 	i :=i+1;
@@ -315,7 +315,7 @@ year :=1950;
 
 FOREACH USA IN ARRAY USAarray LOOP 
 	for j IN 1..USA LOOP
-	   INSERT INTO foreigner_america values (k,'USA',year+i);
+	   INSERT INTO foreigner_america values (k,'United States',year+i);
 	    k :=k+1;
  	END LOOP;
 	i :=i+1;
@@ -358,7 +358,7 @@ year :=1950;
 
 FOREACH Belizes IN ARRAY Belizesarray LOOP 
 	for j IN 1..Belizes LOOP
-	   INSERT INTO foreigner_america values (k,'Belizes',year+i);
+	   INSERT INTO foreigner_america values (k,'Belize',year+i);
 	    k :=k+1;
  	END LOOP;
 	i :=i+1;
@@ -432,7 +432,7 @@ year :=1950;
 
 FOREACH Saintlucia IN ARRAY Saintluciaarray LOOP 
 	for j IN 1..Saintlucia LOOP
-	   INSERT INTO foreigner_america values (k,'Saintlucia',year+i);
+	   INSERT INTO foreigner_america values (k,'Saint Lucia',year+i);
 	    k :=k+1;
  	END LOOP;
 	i :=i+1;
@@ -444,7 +444,7 @@ year :=1950;
 
 FOREACH Saintvincent IN ARRAY Saintvincentarray LOOP 
 	for j IN 1..Saintvincent LOOP
-	   INSERT INTO foreigner_america values (k,'Saintvincent',year+i);
+	   INSERT INTO foreigner_america values (k,'Saint Vincent',year+i);
 	    k :=k+1;
  	END LOOP;
 	i :=i+1;
@@ -456,7 +456,7 @@ year :=1950;
 
 FOREACH Saintkittsandnevis IN ARRAY Saintkittsandnevisarray LOOP 
 	for j IN 1..Saintkittsandnevis LOOP
-	   INSERT INTO foreigner_america values (k,'Saintkittsandnevis',year+i);
+	   INSERT INTO foreigner_america values (k,'Saint Christopher and Nevis',year+i);
 	    k :=k+1;
  	END LOOP;
 	i :=i+1;
@@ -468,7 +468,7 @@ year :=1950;
 
 FOREACH Trinidadandtobago IN ARRAY Trinidadandtobagoarray LOOP 
 	for j IN 1..Trinidadandtobago LOOP
-	   INSERT INTO foreigner_america values (k,'Trinidadandtobago',year+i);
+	   INSERT INTO foreigner_america values (k,'Trinidad and Tobago',year+i);
 	    k :=k+1;
  	END LOOP;
 	i :=i+1;
@@ -492,7 +492,7 @@ year :=1950;
 
 FOREACH Antiguaandbarbuda IN ARRAY Antiguaandbarbudaarray LOOP 
 	for j IN 1..Antiguaandbarbuda LOOP
-	   INSERT INTO foreigner_america values (k,'Antiguaandbarbuda',year+i);
+	   INSERT INTO foreigner_america values (k,'Antigua and Barbuda',year+i);
 	    k :=k+1;
  	END LOOP;
 	i :=i+1;
@@ -502,9 +502,9 @@ i :=0;
 j :=0;
 year :=1950;
 
-FOREACH Argentin IN ARRAY Argentinarray LOOP 
-	for j IN 1..Argentin LOOP
-	   INSERT INTO foreigner_america values (k,'Argentin',year+i);
+FOREACH Argentina IN ARRAY Argentinaarray LOOP 
+	for j IN 1..Argentina LOOP
+	   INSERT INTO foreigner_america values (k,'Argentina',year+i);
 	    k :=k+1;
  	END LOOP;
 	i :=i+1;

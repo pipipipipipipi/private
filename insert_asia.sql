@@ -283,7 +283,7 @@ year :=1950;
 
 FOREACH srilanka IN ARRAY srilankaarray LOOP 
 	for j IN 1..srilanka LOOP
-	   INSERT INTO foreigner_asia values (k,'Srilanka',year+i);
+	   INSERT INTO foreigner_asia values (k,'Sri Lanka',year+i);
 	    k :=k+1;
  	END LOOP;
 	i :=i+1;
@@ -343,7 +343,7 @@ year :=1950;
 
 FOREACH timor IN ARRAY timorarray LOOP 
 	for j IN 1..timor LOOP
-	   INSERT INTO foreigner_asia values (k,'EastTimor',year+i);
+	   INSERT INTO foreigner_asia values (k,'East Timor',year+i);
 	    k :=k+1;
  	END LOOP;
 	i :=i+1;
@@ -433,7 +433,7 @@ year :=1950;
 
 FOREACH korea IN ARRAY koreaarray LOOP 
 	for j IN 1..jordan LOOP
-	   INSERT INTO foreigner_asia values (k,'Korea',year+i);
+	   INSERT INTO foreigner_asia values (k,'South Korea',year+i);
 	    k :=k+1;
  	END LOOP;
 	i :=i+1;
@@ -448,7 +448,7 @@ year :=1950;
 
 FOREACH northkorea IN ARRAY northkoreaarray LOOP 
 	for j IN 1..northkorea LOOP
-	   INSERT INTO foreigner_asia values (k,'NorthKorea',year+i);
+	   INSERT INTO foreigner_asia values (k,'North Korea',year+i);
 	    k :=k+1;
  	END LOOP;
 	i :=i+1;
@@ -628,7 +628,7 @@ year :=1950;
 
 FOREACH saudiarabia IN ARRAY saudiarabiaarray LOOP 
 	for j IN 1..saudiarabia LOOP
-	   INSERT INTO foreigner_asia values (k,'SaudiArabia',year+i);
+	   INSERT INTO foreigner_asia values (k,'Saudi Arabia',year+i);
 	    k :=k+1;
  	END LOOP;
 	i :=i+1;
@@ -673,7 +673,7 @@ year :=1950;
 
 FOREACH thai IN ARRAY thaiarray LOOP 
 	for j IN 1..thai LOOP
-	   INSERT INTO foreigner_asia values (k,'Thai',year+i);
+	   INSERT INTO foreigner_asia values (k,'Thailand',year+i);
 	    k :=k+1;
  	END LOOP;
 	i :=i+1;
@@ -703,7 +703,7 @@ year :=1950;
 
 FOREACH vietnam IN ARRAY vietnamarray LOOP 
 	for j IN 1..vietnam LOOP
-	   INSERT INTO foreigner_asia values (k,'Vietnam',year+i);
+	   INSERT INTO foreigner_asia values (k,'Viet Nam',year+i);
 	    k :=k+1;
  	END LOOP;
 	i :=i+1;

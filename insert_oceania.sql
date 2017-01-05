@@ -90,7 +90,7 @@ year :=1950;
 
 FOREACH Marshall IN ARRAY Marshallarray LOOP 
 	for j IN 1..Marshall LOOP
-	   INSERT INTO foreigner_europe values (k,'Marshall',year+i);
+	   INSERT INTO foreigner_europe values (k,'Marshall Islands',year+i);
 	    k :=k+1;
  	END LOOP;
 	i :=i+1;
@@ -114,7 +114,7 @@ year :=1950;
 
 FOREACH NewZealand IN ARRAY NewZealandarray LOOP 
 	for j IN 1..NewZealand LOOP
-	   INSERT INTO foreigner_europe values (k,'NewZealand',year+i);
+	   INSERT INTO foreigner_europe values (k,'New Zealand',year+i);
 	    k :=k+1;
  	END LOOP;
 	i :=i+1;
@@ -138,7 +138,7 @@ year :=1950;
 
 FOREACH PapuaNewGuinea IN ARRAY PapuaNewGuineaarray LOOP 
 	for j IN 1..PapuaNewGuinea LOOP
-	   INSERT INTO foreigner_europe values (k,'PapuaNewGuinea',year+i);
+	   INSERT INTO foreigner_europe values (k,'Papua New Guinea',year+i);
 	    k :=k+1;
  	END LOOP;
 	i :=i+1;
@@ -162,7 +162,7 @@ year :=1950;
 
 FOREACH Solomon IN ARRAY Solomonarray LOOP 
 	for j IN 1..Solomon LOOP
-	   INSERT INTO foreigner_europe values (k,'Solomon',year+i);
+	   INSERT INTO foreigner_europe values (k,'Solomon Islands',year+i);
 	    k :=k+1;
  	END LOOP;
 	i :=i+1;
