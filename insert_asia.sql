@@ -432,7 +432,7 @@ j :=0;
 year :=1950;
 
 FOREACH korea IN ARRAY koreaarray LOOP 
-	for j IN 1..jordan LOOP
+	for j IN 1..korea LOOP
 	   INSERT INTO foreigner_asia values (k,'South Korea',year+i);
 	    k :=k+1;
  	END LOOP;

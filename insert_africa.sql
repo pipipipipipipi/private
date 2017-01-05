@@ -2,7 +2,8 @@ CREATE OR REPLACE FUNCTION insert_Africa() RETURNS INTEGER AS $$
 
 DECLARE
 	year integer := 1950;
-	k integer := 1;
+        k integer := 14710793;
+        -- eu:14710792
 	i integer := 0;
 	j integer;
 
