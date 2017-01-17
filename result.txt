@@ -1,0 +1,79 @@
+partition
+
+
+pgdemo=# explain analyze select count(*) from foreigner_asia where country='China' and year=1999;
+                                            QUERY PLAN                                            
+--------------------------------------------------------------------------------------------------
+ Foreign Scan  (cost=100.00..161.23 rows=1 width=8) (actual time=619.417..619.419 rows=1 loops=1)
+   Relations: Aggregate on (public.foreigner_asia)
+ Planning time: 0.115 ms
+ Execution time: 620.783 ms
+(4 rows)
+
+
+pgdemo#=explain analyze select count(*) from foreigner_america where country='Peru' and year=1999;
+                                            QUERY PLAN                                            
+--------------------------------------------------------------------------------------------------
+ Foreign Scan  (cost=100.00..161.23 rows=1 width=8) (actual time=169.396..169.398 rows=1 loops=1)
+   Relations: Aggregate on (public.foreigner_america)
+ Planning time: 0.122 ms
+ Execution time: 170.352 ms
+(4 rows)
+
+
+pgdemo=# explain analyze select count(*) from foreigner_europe where country='Italy' and year=1999;
+                                            QUERY PLAN                          
+                  
+--------------------------------------------------------------------------------------------------
+ Foreign Scan  (cost=100.00..161.23 rows=1 width=8) (actual time=174.362..174.363 rows=1 loops=1)
+   Relations: Aggregate on (public.foreigner_europe)
+ Planning time: 0.886 ms
+ Execution time: 191.330 ms
+(4 rows)
+
+
+
+
+all table
+
+
+
+
+pgdemo=# explain analyze select count(*) from foreigner where country='China' and year=1999;
+                                            QUERY PLAN                                   
+         
+-----------------------------------------------------------------------------------------
+---------
+ Foreign Scan  (cost=100.00..161.23 rows=1 width=8) (actual time=973.772..973.773 rows=1 
+loops=1)
+   Relations: Aggregate on (public.foreigner)
+ Planning time: 0.120 ms
+ Execution time: 975.674 ms
+(4 rows)
+
+
+pgdemo=# explain analyze select count(*) from foreigner where country='Peru' and year=1999;
+                                            QUERY PLAN                                   
+         
+-----------------------------------------------------------------------------------------
+---------
+ Foreign Scan  (cost=100.00..161.23 rows=1 width=8) (actual time=961.644..961.645 rows=1 
+loops=1)
+   Relations: Aggregate on (public.foreigner)
+ Planning time: 0.114 ms
+ Execution time: 963.452 ms
+(4 rows)
+
+
+pgdemo=# explain analyze select count(*) from foreigner where country='Italy' and year=1999;
+                                            QUERY PLAN                                   
+         
+-----------------------------------------------------------------------------------------
+---------
+ Foreign Scan  (cost=100.00..161.23 rows=1 width=8) (actual time=954.248..954.249 rows=1 
+loops=1)
+   Relations: Aggregate on (public.foreigner)
+ Planning time: 0.120 ms
+ Execution time: 956.133 ms
+(4 rows)
+
