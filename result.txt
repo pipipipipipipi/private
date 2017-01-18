@@ -1,79 +1,114 @@
 partition
 
-
-pgdemo=# explain analyze select count(*) from foreigner_asia where country='China' and year=1999;
-                                            QUERY PLAN                                            
---------------------------------------------------------------------------------------------------
- Foreign Scan  (cost=100.00..161.23 rows=1 width=8) (actual time=619.417..619.419 rows=1 loops=1)
-   Relations: Aggregate on (public.foreigner_asia)
- Planning time: 0.115 ms
- Execution time: 620.783 ms
-(4 rows)
-
-
-pgdemo#=explain analyze select count(*) from foreigner_america where country='Peru' and year=1999;
-                                            QUERY PLAN                                            
---------------------------------------------------------------------------------------------------
- Foreign Scan  (cost=100.00..161.23 rows=1 width=8) (actual time=169.396..169.398 rows=1 loops=1)
-   Relations: Aggregate on (public.foreigner_america)
- Planning time: 0.122 ms
- Execution time: 170.352 ms
-(4 rows)
+explain analyze select avg(f.year)::int, f.country, avg(i.lat), avg(i.lon), count(*),to_char(CURRENT_TIMESTAMP,'YYYY-MM-DD\"T\"HH24:MI:SS+0900') from ido i, foreigner_europe f where i.country = 'Germany' and f.country = 'Germany' group by f.country;
+                                                                  QUERY PLAN                                                          
+        
+--------------------------------------------------------------------------------------------------------------------------------------
+--------
+ GroupAggregate  (cost=100.00..131.95 rows=7 width=140) (actual time=12992.993..12992.993 rows=1 loops=1)
+   Group Key: f.country
+   ->  Nested Loop  (cost=100.00..131.71 rows=7 width=52) (actual time=1443.312..12170.842 rows=2198163 loops=1)
+         ->  Seq Scan on ido i  (cost=0.00..4.44 rows=1 width=16) (actual time=0.025..0.060 rows=1 loops=1)
+               Filter: ((country)::text = 'Germany'::text)
+               Rows Removed by Filter: 194
+         ->  Foreign Scan on foreigner_europe f  (cost=100.00..127.20 rows=7 width=36) (actual time=1443.282..11742.902 rows=2198163 l
+oops=1)
+ Planning time: 0.171 ms
+ Execution time: 12993.923 ms
+(9 rows)
 
 
-pgdemo=# explain analyze select count(*) from foreigner_europe where country='Italy' and year=1999;
-                                            QUERY PLAN                          
-                  
---------------------------------------------------------------------------------------------------
- Foreign Scan  (cost=100.00..161.23 rows=1 width=8) (actual time=174.362..174.363 rows=1 loops=1)
-   Relations: Aggregate on (public.foreigner_europe)
- Planning time: 0.886 ms
- Execution time: 191.330 ms
-(4 rows)
+where year
 
+pgdemo=# explain analyze select avg(f.year)::int, f.country, avg(i.lat), avg(i.lon), count(*),to_char(CURRENT_TIMESTAMP,'YYYY-MM-DD\"T\"HH24:MI:SS+0900') from ido i, foreigner_europe f where i.country = 'Germany' and f.country = 'Germany' and year=2005 group by f.country;
+                                                                 QUERY PLAN                                                           
+      
+--------------------------------------------------------------------------------------------------------------------------------------
+------
+ GroupAggregate  (cost=100.00..134.98 rows=1 width=140) (actual time=3146.726..3146.726 rows=1 loops=1)
+   Group Key: f.country
+   ->  Nested Loop  (cost=100.00..134.94 rows=1 width=52) (actual time=1923.315..3100.958 rows=121261 loops=1)
+         ->  Seq Scan on ido i  (cost=0.00..4.44 rows=1 width=16) (actual time=0.042..0.091 rows=1 loops=1)
+               Filter: ((country)::text = 'Germany'::text)
+               Rows Removed by Filter: 194
+         ->  Foreign Scan on foreigner_europe f  (cost=100.00..130.49 rows=1 width=36) (actual time=1923.267..3076.769 rows=121261 loo
+ps=1)
+ Planning time: 0.204 ms
+ Execution time: 3147.639 ms
+(9 rows)
+
+
+index
+
+pgdemo=# explain analyze select avg(f.year)::int, f.country, avg(i.lat), avg(i.lon), count(*),to_char(CURRENT_TIMESTAMP,'YYYY-MM-DD\"T\"HH24:MI:SS+0900') from ido i, foreigner_europe f where i.country = 'Germany' and f.country = 'Germany' and year=2005 group by f.country;
+                                                               QUERY PLAN                                                             
+   
+--------------------------------------------------------------------------------------------------------------------------------------
+---
+ GroupAggregate  (cost=100.00..134.98 rows=1 width=140) (actual time=1082.515..1082.515 rows=1 loops=1)
+   Group Key: f.country
+   ->  Nested Loop  (cost=100.00..134.94 rows=1 width=52) (actual time=99.145..1034.003 rows=121261 loops=1)
+         ->  Seq Scan on ido i  (cost=0.00..4.44 rows=1 width=16) (actual time=0.033..0.076 rows=1 loops=1)
+               Filter: ((country)::text = 'Germany'::text)
+               Rows Removed by Filter: 194
+         ->  Foreign Scan on foreigner_europe f  (cost=100.00..130.49 rows=1 width=36) (actual time=99.106..977.403 rows=121261 loops=
+1)
+ Planning time: 0.974 ms
+ Execution time: 1091.590 ms
+(9 rows)
 
 
 
 all table
 
 
+pgdemo=# explain analyze select avg(f.year)::int, f.country, avg(i.lat), avg(i.lon), count(*),to_char(CURRENT_TIMESTAMP,'YYYY-MM-DD\"T\"HH24:MI:SS+0900') from ido i, foreigner f where i.country = 'Germany' and f.country = 'Germany' group by f.country;
+                                                               QUERY PLAN                                                               
+----------------------------------------------------------------------------------------------------------------------------------------
+ GroupAggregate  (cost=100.00..131.95 rows=7 width=140) (actual time=43880.436..43880.436 rows=1 loops=1)
+   Group Key: f.country
+   ->  Nested Loop  (cost=100.00..131.71 rows=7 width=52) (actual time=11428.271..42835.618 rows=2198163 loops=1)
+         ->  Seq Scan on ido i  (cost=0.00..4.44 rows=1 width=16) (actual time=0.031..0.067 rows=1 loops=1)
+               Filter: ((country)::text = 'Germany'::text)
+               Rows Removed by Filter: 194
+         ->  Foreign Scan on foreigner f  (cost=100.00..127.20 rows=7 width=36) (actual time=11428.236..42353.888 rows=2198163 loops=1)
+ Planning time: 0.182 ms
+ Execution time: 43881.847 ms
+(9 rows)
 
 
-pgdemo=# explain analyze select count(*) from foreigner where country='China' and year=1999;
-                                            QUERY PLAN                                   
-         
------------------------------------------------------------------------------------------
----------
- Foreign Scan  (cost=100.00..161.23 rows=1 width=8) (actual time=973.772..973.773 rows=1 
-loops=1)
-   Relations: Aggregate on (public.foreigner)
- Planning time: 0.120 ms
- Execution time: 975.674 ms
-(4 rows)
+
+where year
+
+pgdemo=# explain analyze select avg(f.year)::int, f.country, avg(i.lat), avg(i.lon), count(*),to_char(CURRENT_TIMESTAMP,'YYYY-MM-DD\"T\"HH24:MI:SS+0900') from ido i, foreigner f where i.country = 'Germany' and f.country = 'Germany' and year=2005 group by f.country;
+                                                              QUERY PLAN                                                               
+---------------------------------------------------------------------------------------------------------------------------------------
+ GroupAggregate  (cost=100.00..134.98 rows=1 width=140) (actual time=15187.523..15187.523 rows=1 loops=1)
+   Group Key: f.country
+   ->  Nested Loop  (cost=100.00..134.94 rows=1 width=52) (actual time=11857.516..15129.444 rows=121261 loops=1)
+         ->  Seq Scan on ido i  (cost=0.00..4.44 rows=1 width=16) (actual time=0.027..0.059 rows=1 loops=1)
+               Filter: ((country)::text = 'Germany'::text)
+               Rows Removed by Filter: 194
+         ->  Foreign Scan on foreigner f  (cost=100.00..130.49 rows=1 width=36) (actual time=11857.485..15102.693 rows=121261 loops=1)
+ Planning time: 0.181 ms
+ Execution time: 15188.907 ms
+(9 rows)
 
 
-pgdemo=# explain analyze select count(*) from foreigner where country='Peru' and year=1999;
-                                            QUERY PLAN                                   
-         
------------------------------------------------------------------------------------------
----------
- Foreign Scan  (cost=100.00..161.23 rows=1 width=8) (actual time=961.644..961.645 rows=1 
-loops=1)
-   Relations: Aggregate on (public.foreigner)
- Planning time: 0.114 ms
- Execution time: 963.452 ms
-(4 rows)
+index
 
+pgdemo=# explain analyze select avg(f.year)::int, f.country, avg(i.lat), avg(i.lon), count(*),to_char(CURRENT_TIMESTAMP,'YYYY-MM-DD\"T\"HH24:MI:SS+0900') from ido i, foreigner f where i.country = 'Germany' and f.country = 'Germany' and year=2005 group by f.country;
+                                                             QUERY PLAN                                                              
+-------------------------------------------------------------------------------------------------------------------------------------
+ GroupAggregate  (cost=100.00..134.98 rows=1 width=140) (actual time=3710.064..3710.064 rows=1 loops=1)
+   Group Key: f.country
+   ->  Nested Loop  (cost=100.00..134.94 rows=1 width=52) (actual time=1404.863..3651.829 rows=121261 loops=1)
+         ->  Seq Scan on ido i  (cost=0.00..4.44 rows=1 width=16) (actual time=0.029..0.065 rows=1 loops=1)
+               Filter: ((country)::text = 'Germany'::text)
+               Rows Removed by Filter: 194
+         ->  Foreign Scan on foreigner f  (cost=100.00..130.49 rows=1 width=36) (actual time=1404.830..3625.111 rows=121261 loops=1)
+ Planning time: 0.180 ms
+ Execution time: 3711.698 ms
+(9 rows)
 
-pgdemo=# explain analyze select count(*) from foreigner where country='Italy' and year=1999;
-                                            QUERY PLAN                                   
-         
------------------------------------------------------------------------------------------
----------
- Foreign Scan  (cost=100.00..161.23 rows=1 width=8) (actual time=954.248..954.249 rows=1 
-loops=1)
-   Relations: Aggregate on (public.foreigner)
- Planning time: 0.120 ms
- Execution time: 956.133 ms
-(4 rows)
 
